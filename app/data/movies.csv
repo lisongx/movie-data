@@ -1,4 +1,4 @@
-,no,distribution,ratings_count,imdb_rating,title_year,movie_year,movie_title,imdb_id,douban_id,douban_rating,douban_ratings_count,douban_title,genre1,genre2,genre3
+index,no,distribution,ratings_count,imdb_rating,title_year,movie_year,movie_title,imdb_id,douban_id,douban_rating,douban_ratings_count,douban_title,genre1,genre2,genre3
 0,9,12211,144214,7.0,10 Things I Hate About You (1999),1999,10 Things I Hate About You,tt0147800,1296359,7.5,15454,10 Things I Hate About You,Comedy,Drama,Drama
 1,11,1111000,83046,4.9,"10,000 BC (2008)",2008,"10,000 BC",tt0443649,1949761,5.6,26809,"10,000 BC",Comedy,Drama,Drama
 2,14,1221000,49255,5.5,101 Dalmatians (1996),1996,101 Dalmatians,tt0115433,1293135,7.2,56057,101 Dalmatians,Action,Adventure,Adventure
