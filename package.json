@@ -1,7 +1,9 @@
 {
   "name": "moviedata",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-rsync": "^0.6.1"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
