@@ -1,7 +1,7 @@
 <section id="data">
     <div class="row">
       <div class="small-centered small-8 columns">
-        <h1 class="text-center">info</h1>
+        <h1 class="text-center">Top Diff 30</h1>
       </div>
     </div>
     
@@ -17,7 +17,7 @@
             </tr>
           </thead>
            <tbody>
-             <tr ng-repeat="movie in movies| orderBy: diffAbs | limitTo: 20 ">
+             <tr ng-repeat="movie in movies| orderBy: diffAbs | limitTo: 30 ">
                <td>{{movie.movie_title}}</td>
                <td>{{movie.movie_year}}</td>
                <td>{{movie.douban_rating}}</td>
