@@ -12,16 +12,16 @@
             <tr>
               <th width="300">title</th>
               <th>year</th>
-              <th>douban</th>
-              <th>IMDb</th>
+              <th>douban(counts)</th>
+              <th>IMDb(counts)</th>
             </tr>
           </thead>
            <tbody>
              <tr ng-repeat="movie in movies| orderBy: diffAbs | limitTo: 30 ">
                <td>{{movie.movie_title}}</td>
                <td>{{movie.movie_year}}</td>
-               <td>{{movie.douban_rating}}</td>
-               <td>{{movie.imdb_rating}}</td>
+               <td>{{movie.douban_rating}} ({{movie.douban_ratings_count}})</td>
+               <td>{{movie.imdb_rating}} ({{movie.ratings_count}})</td>
              </tr>
            </tbody>
         </table>
