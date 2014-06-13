@@ -1,24 +1,34 @@
 <section id="data">
     <div class="row">
       <div class="small-centered small-8 columns">
-        <h1 class="text-center">Top Diff 50</h1>
+        <h1 class="text-center">Movie Rating in Different Culture</h1>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="small-centered small-8 columns">
+        <h2>Background <small>ratings in different culture</small></h2>
+        <p>
+          There are many movie rating site on the Internet. While <u>IMDb</u> represents the taste of international/us audience, <u>Douban</u> represents the Chinese audience. Often we found that the rating of the same movie in the two sites can be very diferent. So we got all the movies info with more than 4000 ratings in both site to do some analysis (The data is snapshoted at Oct 2013). Here's what we got!
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-centered small-8 columns">
+        <h2>Top Diff 50 </h2>
         <table>
           <thead>
             <tr>
-              <th width="300">title</th>
+              <th>title</th>
               <th>year</th>
               <th>douban(counts)</th>
               <th>IMDb(counts)</th>
             </tr>
           </thead>
-           <tbody>
-             <tr ng-repeat="movie in movies| orderBy: diffAbs | limitTo: 50 ">
-               <td>{{movie.douban_title}}</td>
+          <tbody>
+             <tr ng-repeat="movie in movies| filter: diffAbs | limitTo: 50 ">
+               <td data-title="title">{{movie.douban_title}}</td>
                <td>{{movie.movie_year}}</td>
                <td>
                  <a ng-href="http://movie.douban.com/subject/{{movie.douban_id}}/">
