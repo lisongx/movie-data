@@ -18,10 +18,10 @@
           </thead>
            <tbody>
              <tr ng-repeat="movie in movies| orderBy: diffAbs | limitTo: 50 ">
-               <td>{{movie.movie_title}}</td>
+               <td>{{movie.douban_title}}</td>
                <td>{{movie.movie_year}}</td>
                <td>
-                 <a ng-href="http://movie.douban.com/{{movie.douban_id}}/">
+                 <a ng-href="http://movie.douban.com/subject/{{movie.douban_id}}/">
                    {{movie.douban_rating}}
                  </a>
                    ({{movie.douban_ratings_count}})
