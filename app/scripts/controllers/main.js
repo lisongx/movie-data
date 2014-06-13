@@ -8,7 +8,7 @@
  * Controller of the movieDataApp
  */
 angular.module('movieDataApp')
-  .controller('MainCtrl', function ($scope, $http, ngTableParams) {
+  .controller('MainCtrl', function ($scope, $http) {
     $scope.movies = [];
 
     $scope.diffAbs = function(movie) {
