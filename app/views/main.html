@@ -27,7 +27,7 @@
             </tr>
           </thead>
           <tbody>
-             <tr ng-repeat="movie in movies| filter: diffAbs | limitTo: 50 ">
+             <tr ng-repeat="movie in movies| orderBy: diffAbs | limitTo: 50 ">
                <td data-title="title">{{movie.douban_title}}</td>
                <td>{{movie.movie_year}}</td>
                <td>
