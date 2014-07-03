@@ -8,11 +8,15 @@
  * Controller of the movieDataApp
  */
 angular.module('movieDataApp')
-  .controller('MainCtrl', function ($scope, $http, ngTableParams) {
+  .controller('MainCtrl', function ($scope, $http) {
     $scope.movies = [];
 
     $scope.diff = function(movie) {
        return movie.douban_rating - movie.imdb_rating;
+    };
+
+    $scope.diffReverse = function(movie) {
+       return -(movie.douban_rating - movie.imdb_rating);
     };
 
     $http({
