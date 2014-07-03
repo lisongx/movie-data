@@ -2,6 +2,7 @@
     <div class="row">
       <div class="small-centered small-8 columns">
         <h1 class="text-center">Movie Rating in Different Culture</h1>
+        <h5>by Sean Lee and Zoo Yuan</h5>
       </div>
     </div>
 
@@ -16,7 +17,9 @@
 
     <div class="row">
       <div class="small-centered small-8 columns">
-        <h2>Top Diff 50 </h2>
+        <h2>Top Diff 10 </h2>
+
+        <h3> douban < IMDb </h3>
         <table>
           <thead>
             <tr>
@@ -27,7 +30,37 @@
             </tr>
           </thead>
           <tbody>
-             <tr ng-repeat="movie in movies| orderBy: diffAbs | limitTo: 50 ">
+             <tr ng-repeat="movie in movies| orderBy: diff | limitTo: 10 ">
+               <td data-title="title">{{movie.douban_title}}</td>
+               <td>{{movie.movie_year}}</td>
+               <td>
+                 <a ng-href="http://movie.douban.com/subject/{{movie.douban_id}}/">
+                   {{movie.douban_rating}}
+                 </a>
+                   ({{movie.douban_ratings_count}})
+               </td>
+               <td>
+                 <a ng-href="http://www.imdb.com/title/{{movie.imdb_id}}/">
+                   {{movie.imdb_rating}}
+                 </a>
+                 ({{movie.ratings_count}})
+               </td>
+             </tr>
+           </tbody>
+        </table>
+
+        <h3> douban > IMDb </h3>
+        <table>
+          <thead>
+            <tr>
+              <th>title</th>
+              <th>year</th>
+              <th>douban(counts)</th>
+              <th>IMDb(counts)</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr ng-repeat="movie in movies| orderBy: '-diff'| limitTo: 10 ">
                <td data-title="title">{{movie.douban_title}}</td>
                <td>{{movie.movie_year}}</td>
                <td>
