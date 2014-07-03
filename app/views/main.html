@@ -2,7 +2,16 @@
     <div class="row">
       <div class="small-centered small-8 columns">
         <h1 class="text-center">Movie Rating in Different Culture</h1>
-        <h5>by Sean Lee and Zoo Yuan</h5>
+        <h5>by 
+          Sean Lee
+          <a href="http://notimportan.org/">
+            <img class="avatar" src="http://i.imgur.com/BGvEb9N.jpg" alt=""/>
+          </a> 
+
+          and 
+          Zoo Yuan
+          <img class="avatar" src="http://i.imgur.com/zzjysQP.jpg" alt=""/>
+        </h5>
       </div>
     </div>
 
@@ -60,7 +69,7 @@
             </tr>
           </thead>
           <tbody>
-             <tr ng-repeat="movie in movies| orderBy: diffReverse | limitTo: 10 ">
+             <tr ng-repeat="movie in movies| orderBy: -diff | limitTo: 10 ">
                <td data-title="title">{{movie.douban_title}}</td>
                <td>{{movie.movie_year}}</td>
                <td>
@@ -78,6 +87,31 @@
              </tr>
            </tbody>
         </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-centered small-8 columns">
+        <h2>Year Distribution</h2>
+        <p>
+          Newly released movies tend to be more different in both sites. 
+        </p>
+        <!-- <nvd3-scatter-chart
+                  data="yearDistributionData"
+                  id="yearDistribution"
+                  width="600"
+                  height="400"
+                  showLegend="true"
+                  interactive="true"
+                  tooltips="true"
+                  >
+                  <svg></svg>
+        </nvd3-scatter-chart> -->
+        
+        <div id="year-distribution-chart">
+          <svg></svg>
+        </div>
+        
       </div>
     </div>
 </section>

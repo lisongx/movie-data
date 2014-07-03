@@ -5,3 +5,15 @@
 body {
   background: white;
 }
+
+#year-distribution-chart svg {
+  height: 360px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px black;
+  margin: 10px;
+}
