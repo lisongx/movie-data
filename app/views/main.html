@@ -69,7 +69,7 @@
             </tr>
           </thead>
           <tbody>
-             <tr ng-repeat="movie in movies| orderBy: -diff | limitTo: 10 ">
+             <tr ng-repeat="movie in movies| orderBy: '-diff' | limitTo: 10 ">
                <td data-title="title">{{movie.douban_title}}</td>
                <td>{{movie.movie_year}}</td>
                <td>

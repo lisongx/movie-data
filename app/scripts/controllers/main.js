@@ -66,7 +66,6 @@ angular.module('movieDataApp')
            });
 
          $scope.movies = movies;
-         
 
        }).
        error(function (data, status) {

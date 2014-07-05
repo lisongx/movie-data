@@ -12,9 +12,6 @@
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
     "foundation": "~5.2.3",
-    "d3": "~3.1.6",
-    "nvd3": "~1.1.15-beta",
-    "angularjs-nvd3-directives": "~0.0.7",
     "lodash": "~2.4.1"
   },
   "devDependencies": {
